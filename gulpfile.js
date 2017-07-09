@@ -33,7 +33,7 @@ var config = {
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
-	dest: 'dist/style-guide'
+	dest: 'dist'
 };
 
 
@@ -119,7 +119,7 @@ gulp.task('serve', function () {
 
 	browserSync({
 		server: {
-			baseDir: 'dist'
+			baseDir: config.dest
 		},
 		notify: false,
 		logPrefix: 'FABRICATOR'

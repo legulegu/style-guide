@@ -64,7 +64,7 @@ gulp.task('styles:fabricator', function () {
 gulp.task('styles:toolkit', function () {
 	gulp.src(config.src.styles.toolkit)
 		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass({includePaths: ['node_modules/bootstrap-sass/assets/stylesheets']}).on('error', sass.logError))
 		.pipe(prefix('last 1 version'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(sourcemaps.write())

@@ -5,11 +5,10 @@
   "homepage": "http://fbrctr.github.io/",
   "main": "README.md",
   "scripts": {
-    "gulp": "gulp",
-    "prestart": "npm install",
-    "build": "npm install && gulp",
+    "build": "gulp",
     "start": "gulp --dev",
-    "test": "npm run build"
+    "test": "npm run build",
+    "doc": "rm -rf ./dist && gulp && rm -rf ./docs/ && cp -rf ./dist ./docs"
   },
   "keywords": [
     "toolkit",

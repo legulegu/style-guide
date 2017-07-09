@@ -6,7 +6,8 @@
   "author": "benweizhu <benweizhu@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "echarts": "^3.6.2"
   },
   "devDependencies": {
     "browserify": "^14.4.0",
@@ -16,7 +17,7 @@
   },
   "scripts": {
     "sass": "gulp sass",
-    "server": "gulp",
+    "server": "browserify ./app/js/index.js -o ./app/js/bundle.js & gulp",
     "browserify": "browserify ./app/js/index.js -o ./app/js/bundle.js",
     "doc": "gulp sass && rm -rf ./docs/ && cp -rf ./app ./docs"
   }

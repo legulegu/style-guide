@@ -9,6 +9,7 @@
     "bootstrap-sass": "^3.3.7"
   },
   "devDependencies": {
+    "browserify": "^14.4.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "gulp-webserver": "^0.9.1"
@@ -16,6 +17,7 @@
   "scripts": {
     "sass": "gulp sass",
     "server": "gulp",
+    "browserify": "browserify ./app/js/index.js -o ./app/js/bundle.js",
     "doc": "gulp sass && rm -rf ./docs/ && cp -rf ./app ./docs"
   }
 }

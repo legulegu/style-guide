@@ -48,6 +48,7 @@
     "webpack": "^1.8.11"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1"
   }
 }

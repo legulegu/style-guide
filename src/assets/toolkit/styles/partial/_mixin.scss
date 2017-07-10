@@ -1,0 +1,44 @@
+$tv-width: 1200px;
+$desktop-width: 992px;
+$mobile-width: 768px;
+$mobile-Portrait-width: 480px;
+
+@mixin tv {
+    @media (min-width: #{$tv-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$tv-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile-width + 1}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+
+@mixin box-shadow($offset-x, $offset-y, $blur-radius, $color) {
+    -webkit-box-shadow: $offset-x $offset-y $blur-radius $color;
+    -moz-box-shadow: $offset-x $offset-y $blur-radius $color;
+    -ms-box-shadow: $offset-x $offset-y $blur-radius $color;
+    -o-box-shadow: $offset-x $offset-y $blur-radius $color;
+    box-shadow: $offset-x $offset-y $blur-radius $color;
+}
+
+@mixin background-image-set($imageX1, $imageX2) {
+    background: image-set(url($imageX1) 1x, url($imageX2) 2x);
+    background: -webkit-image-set(url($imageX1) 1x, url($imageX2) 2x);
+    background: -moz-image-set(url($imageX1) 1x, url($imageX2) 2x);
+    background: -o-image-set(url($imageX1) 1x, url($imageX2) 2x);
+    background: -ms-image-set(url($imageX1) 1x, url($imageX2) 2x);
+}

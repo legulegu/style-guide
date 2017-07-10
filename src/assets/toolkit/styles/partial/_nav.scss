@@ -1,10 +1,17 @@
+@import "mixin";
+
 .lg-navbar {
     margin-bottom: 0;
     border-bottom: 1px solid #eee;
     background: #fff;
     min-height: 60px;
-    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+    @include box-shadow(0, 0, 2px, rgba(0, 0, 0, 0.1));
+}
+
+.lg-navbar-toggle {
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 .lg-navbar-nav {
@@ -32,11 +39,12 @@
     background-position: -10px 0 !important;
     background-repeat: no-repeat;
     display: inline-block;
-    background: image-set(url(https://user-images.githubusercontent.com/5471228/27991264-798a4390-64a3-11e7-96e2-53357f248c41.png) 1x, url(https://user-images.githubusercontent.com/5471228/27991258-60fba35a-64a3-11e7-9677-57c6a7ad178a.png) 2x);
-    background: -webkit-image-set(url(https://user-images.githubusercontent.com/5471228/27991264-798a4390-64a3-11e7-96e2-53357f248c41.png) 1x, url(https://user-images.githubusercontent.com/5471228/27991258-60fba35a-64a3-11e7-9677-57c6a7ad178a.png) 2x);
-    background: -moz-image-set(url(https://user-images.githubusercontent.com/5471228/27991264-798a4390-64a3-11e7-96e2-53357f248c41.png) 1x, url(https://user-images.githubusercontent.com/5471228/27991258-60fba35a-64a3-11e7-9677-57c6a7ad178a.png) 2x);
-    background: -o-image-set(url(https://user-images.githubusercontent.com/5471228/27991264-798a4390-64a3-11e7-96e2-53357f248c41.png) 1x, url(https://user-images.githubusercontent.com/5471228/27991258-60fba35a-64a3-11e7-9677-57c6a7ad178a.png) 2x);
-    background: -ms-image-set(url(https://user-images.githubusercontent.com/5471228/27991264-798a4390-64a3-11e7-96e2-53357f248c41.png) 1x, url(https://user-images.githubusercontent.com/5471228/27991258-60fba35a-64a3-11e7-9677-57c6a7ad178a.png) 2x);
+
+    @include background-image-set("https://user-images.githubusercontent.com/5471228/27991264-798a4390-64a3-11e7-96e2-53357f248c41.png", "https://user-images.githubusercontent.com/5471228/27991258-60fba35a-64a3-11e7-9677-57c6a7ad178a.png");
+
+    @include mobile {
+        margin-left: 15px !important;
+    }
 }
 
 .lg-navbar-form {

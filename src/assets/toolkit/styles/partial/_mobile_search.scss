@@ -1,0 +1,55 @@
+.mobile-search-hide {
+  height: 0;
+  position: relative;
+  top: -120px;
+}
+
+.mobile-search {
+  display: block;
+  z-index: 2000;
+  padding-top: 10px;
+  background: white;
+  height: 100% !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: padding-top .2s ease;
+  form {
+    width: 97%;
+    margin: 0 auto;
+    input {
+      height: 40px;
+    }
+  }
+
+  .recent-search {
+    padding: 0 10px;
+    h5 {
+      margin-bottom: 15px;
+      color: #666666;
+    }
+    a {
+      text-decoration: none;
+      color: #333333;
+      border: 1px solid #e5e5e5;
+      border-radius: 3px;
+      padding: 5px 10px;
+      margin: 2px 5px 2px 0;
+    }
+  }
+
+  .mobile-search-close-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("../image/icon/close.svg");
+    background-size: 50px 50px;
+    margin: 10px auto 0;
+  }
+  .mobile-search-logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -2,7 +2,10 @@
  * Toolkit JavaScript
  */
 
-'use strict';
+"use strict";
 
-require('./components/nav.js')();
-require('./components/auto-complete')(function(){});
+$(document).ready(function() {
+  require("./components/nav")();
+  require("./components/auto-complete")(function() {});
+  require("./components/mobile-search")();
+});

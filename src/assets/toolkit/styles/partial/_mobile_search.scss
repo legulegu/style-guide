@@ -20,6 +20,9 @@
     input {
       height: 40px;
     }
+    .form-control {
+      @include remove-box-shadow();
+    }
   }
 
   .recent-search {
@@ -40,12 +43,11 @@
 
   .mobile-search-close-icon {
     display: block;
-    width: 50px;
-    height: 50px;
-    background: url("../image/icon/close.svg");
-    background-size: 50px 50px;
-    margin: 10px auto 0;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 10px;
   }
+
   .mobile-search-logo {
     position: absolute;
     bottom: 0;

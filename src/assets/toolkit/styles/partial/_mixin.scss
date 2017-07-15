@@ -35,6 +35,14 @@ $mobile-Portrait-width: 480px;
     box-shadow: $offset-x $offset-y $blur-radius $color;
 }
 
+@mixin remove-box-shadow() {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
 @mixin background-image-set($imageX1, $imageX2) {
     background: image-set(url($imageX1) 1x, url($imageX2) 2x);
     background: -webkit-image-set(url($imageX1) 1x, url($imageX2) 2x);

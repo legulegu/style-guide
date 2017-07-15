@@ -30,6 +30,7 @@ var config = {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
 			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
 		},
+		fonts: 'node_modules/bootstrap-sass/assets/fonts/**/*',
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
@@ -99,6 +100,10 @@ gulp.task('images', ['favicon'], function () {
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
 });
 
+gulp.task('fonts', function(){
+	return gulp.src(config.src.fonts).pipe(gulp.dest(config.dest + '/assets/toolkit/styles'));
+});
+
 gulp.task('favicon', function () {
 	return gulp.src('./src/favicon.ico')
 		.pipe(gulp.dest(config.dest));
@@ -159,6 +164,9 @@ gulp.task('serve', function () {
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
 
+	gulp.task('fonts:watch', ['fonts'], reload);
+	gulp.watch(config.src.fonts, ['fonts:watch']);
+
 });
 
 
@@ -170,6 +178,7 @@ gulp.task('default', ['clean'], function () {
 		'styles',
 		'scripts',
 		'images',
+		'fonts',
 		'assemble'
 	];
 

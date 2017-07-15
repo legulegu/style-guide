@@ -30,7 +30,6 @@ var config = {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
 			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
 		},
-		fonts: 'node_modules/bootstrap-sass/assets/fonts/**/*',
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
@@ -65,7 +64,7 @@ gulp.task('styles:fabricator', function () {
 gulp.task('styles:toolkit', function () {
 	gulp.src(config.src.styles.toolkit)
 		.pipe(sourcemaps.init())
-		.pipe(sass({includePaths: ['node_modules/bootstrap-sass/assets/stylesheets']}).on('error', sass.logError))
+		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('last 1 version'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(sourcemaps.write())
@@ -98,10 +97,6 @@ gulp.task('images', ['favicon'], function () {
 	return gulp.src(config.src.images)
 		.pipe(imagemin())
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
-});
-
-gulp.task('fonts', function(){
-	return gulp.src(config.src.fonts).pipe(gulp.dest(config.dest + '/assets/toolkit/styles'));
 });
 
 gulp.task('favicon', function () {
@@ -164,9 +159,6 @@ gulp.task('serve', function () {
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
 
-	gulp.task('fonts:watch', ['fonts'], reload);
-	gulp.watch(config.src.fonts, ['fonts:watch']);
-
 });
 
 
@@ -178,7 +170,6 @@ gulp.task('default', ['clean'], function () {
 		'styles',
 		'scripts',
 		'images',
-		'fonts',
 		'assemble'
 	];
 

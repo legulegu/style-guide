@@ -14,6 +14,15 @@
   margin-bottom: 13px;
 }
 
+.lg-navbar-search {
+  margin: 12px 10px 12px 0;
+  .glyphicon-search {
+		font-size: 22px;
+		color: #9e9e9e;
+		vertical-align: text-top;
+  }
+}
+
 .lg-navbar-nav {
   margin-left: 10px;
 }
@@ -48,10 +57,10 @@
 }
 
 .lg-navbar-form {
-	margin: 13px 0;
-	.glyphicon {
-		vertical-align: text-top;
-	}
+  margin: 13px 0;
+  .glyphicon {
+    vertical-align: text-top;
+  }
 }
 
 .lg-navbar-login {

@@ -5,4 +5,4 @@
 'use strict';
 
 require('./components/nav.js')();
-require('./components/auto-complete')();
+require('./components/auto-complete')(function(){});

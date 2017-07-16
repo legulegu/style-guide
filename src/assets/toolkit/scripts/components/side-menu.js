@@ -1,13 +1,13 @@
 module.exports = function() {
   function openNav() {
-    $(".sidenav").css("width", "150px");
+    $(".sidenav").css("left", "0");
     $(".lg-main").css("margin-left", "150px");
   }
 
   function closeNav() {
-    if ($(".sidenav").css("width") !== "0px") {
-      $(".sidenav").css("width", "0px");
-      $(".lg-main").css("margin-left", "0px");
+    if ($(".sidenav").css("left") !== "-150px") {
+      $(".sidenav").css("left", "-150px");
+			$(".lg-main").css("margin-left", "0px");
     }
   }
 

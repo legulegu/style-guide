@@ -1,12 +1,12 @@
 @import "mixin";
 
-.mobile-search-hide {
+.lg-mobile-search-hide {
   height: 0;
   position: relative;
   top: -120px;
 }
 
-.mobile-search {
+.lg-mobile-search {
   display: block;
   z-index: 2000;
   padding-top: 10px;
@@ -27,7 +27,7 @@
     }
   }
 
-  .recent-search {
+  .lg-recent-search {
     padding: 0 10px;
     h5 {
       margin-bottom: 15px;
@@ -43,7 +43,7 @@
     }
   }
 
-  .mobile-search-close-icon {
+  .lg-mobile-search-close-icon {
     display: block;
     text-align: center;
     font-size: 28px;
@@ -55,7 +55,7 @@
     }
   }
 
-  .mobile-search-logo {
+  .lg-mobile-search-logo {
     position: absolute;
     bottom: 0;
 		left: 50%;

@@ -5,5 +5,5 @@ module.exports = function() {
   });
   $dropdown.mouseleave(function() {
     $(this).removeClass("lg-navbar-nav-li--open");
-  });
+	});
 };

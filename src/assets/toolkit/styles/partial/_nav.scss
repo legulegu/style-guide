@@ -5,7 +5,9 @@
   border-bottom: 1px solid #eee;
   background: #fff;
   min-height: 60px;
-
+	right: inherit;
+	left: inherit;
+	width: 100%;
   @include box-shadow(0, 0, 2px, rgba(0, 0, 0, 0.1));
 }
 

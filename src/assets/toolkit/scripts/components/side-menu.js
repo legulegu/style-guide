@@ -1,14 +1,16 @@
 module.exports = function() {
   function openNav() {
-    document.getElementById("mySidenav").style.width = "150px";
-    document.getElementById("main").style.marginLeft = "150px";
+    $(".sidenav").css("width", "150px");
+    $(".lg-main").css("margin-left", "150px");
   }
 
   function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
+    if ($(".sidenav").css("width") !== "0px") {
+      $(".sidenav").css("width", "0px");
+      $(".lg-main").css("margin-left", "0px");
+    }
   }
 
   $(".lg-navbar-toggle").click(openNav);
-  $(".close-side-menu").click(closeNav);
+  $(".lg-main").click(closeNav);
 };

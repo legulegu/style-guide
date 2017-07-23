@@ -119,7 +119,9 @@ gulp.task('serve', function () {
 
 	browserSync({
 		server: {
-			baseDir: config.dest
+			baseDir: config.dest,
+			host: '0.0.0.0',
+			port: process.env.PORT || 3000
 		},
 		notify: false,
 		logPrefix: 'FABRICATOR'

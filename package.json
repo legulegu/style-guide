@@ -6,6 +6,7 @@
   "main": "README.md",
   "scripts": {
     "start": "gulp --dev",
+    "postinstall": "gulp default",
     "test": "npm run build",
     "doc": "rm -rf ./docs/ && cp -rf ./dist ./docs"
   },

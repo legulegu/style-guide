@@ -5,7 +5,7 @@
   "homepage": "http://fbrctr.github.io/",
   "main": "README.md",
   "scripts": {
-    "start": "./node_modules/.bin/gulp --dev",
+    "start": "gulp --dev",
     "test": "npm run build",
     "doc": "rm -rf ./docs/ && cp -rf ./dist ./docs"
   },

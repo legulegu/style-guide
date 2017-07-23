@@ -1,1 +1,1 @@
-web: yarn start
+web: node node_modules/gulp/bin/gulp --dev
